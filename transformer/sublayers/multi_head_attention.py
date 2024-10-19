@@ -62,7 +62,7 @@ class MultiHeadAttention(nn.Module):
                 `key`: torch.Tensor; Tensor of shape [batch_size, sequence_length, d_model]
                 `value`: torch.Tensor; Tensor of shape [batch_size, sequence_length, d_model]
                 `mask`: torch.Tensor; Tensor of shape [batch_size, 1, 1, sequence_length] (Padding Mask)
-                or tensor of shape [batch_size, 1, 1, sequence_length, sequence_length] (Look-Ahead Mask)
+                or tensor of shape [batch_size, 1, sequence_length, sequence_length] (Look-Ahead Mask)
 
             Returns:
                 `output`: torch.Tensor; Tensor of shape [batch_size, sequence_length, d_model]
